@@ -28,22 +28,8 @@ import de.robv.android.xposed.XposedHelpers;
 
 // 典中典给小米擦屁股
 public class ZenModeFix extends BaseHook {
-    String NotificationLoadClass;
-
     @Override
     public void init() {
-        NotificationLoadClass = "com.android.systemui.statusbar.notification.policy.MiuiAlertManager";
-
-        hookAllMethods(NotificationLoadClass, lpparam.classLoader, "buzzBeepBlink", new MethodHook() {
-                @Override
-                protected void before(MethodHookParam param) {
-                    Context mContext = (Context) XposedHelpers.getObjectField(param.thisObject, "mContext");
-                    NotificationManager notificationManager = (NotificationManager) mContext.getSystemService(Context.NOTIFICATION_SERVICE);
-                    if (notificationManager.getCurrentInterruptionFilter() >= NotificationManager.INTERRUPTION_FILTER_PRIORITY) {
-                        param.setResult(null);
-                    }
-                }
-            }
-        );
+        XposedHelpers.setStaticBooleanField(findClassIfExists("miuix.os.Build"), "IS_INTERNATIONAL_BUILD", false);
     }
 }
