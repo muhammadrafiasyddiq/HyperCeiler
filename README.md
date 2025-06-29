@@ -6,7 +6,7 @@
 
 ### Make HyperOS Great Again!
 
-简体中文&nbsp;&nbsp;|&nbsp;&nbsp;[繁體中文](/README_zh-HK.md)&nbsp;&nbsp;|&nbsp;&nbsp;[English](/README_en-US.md)&nbsp;&nbsp;|&nbsp;&nbsp;[Português (Brasil)](/README_pt-BR.md)
+简体中文&nbsp;&nbsp;|&nbsp;&nbsp;[繁體中文](/README_zh-HK.md)&nbsp;&nbsp;|&nbsp;&nbsp;[English](/README_en-US.md)&nbsp;&nbsp;|&nbsp;&nbsp;[Українська](/README_uk_UA.md)&nbsp;&nbsp;|&nbsp;&nbsp;[Português (Brasil)](/README_pt-BR.md)
 
 </div>
 
@@ -150,7 +150,6 @@ HyperCeiler 已停止维护 Android 11-13 的 MIUI ROM 和 Android 13 的 HyperO
 - [「HyperSmartCharge」 by buffcow](https://github.com/buffcow/HyperSmartCharge)
 - [「HyperStar」 by YunZiA](https://github.com/YunZiA/HyperStar)
 - [「Kotlin」 by JetBrains](https://github.com/JetBrains/kotlin)
-- [「Lyric-Getter」 by xiaowine](https://github.com/xiaowine/Lyric-Getter)
 - [「MaxFreeForm」 by YifePlayte](https://github.com/YifePlayte/MaxFreeForm)
 - [「MediaControlOpt」 by YuKongA](https://github.com/YuKongA/MediaControlOpt)
 - [「MiuiFeature」 by MoralNorm](https://github.com/moralnorm/miui_feature)
@@ -167,6 +166,7 @@ HyperCeiler 已停止维护 Android 11-13 的 MIUI ROM 和 Android 13 的 HyperO
 - [「RemoveMiuiSystemSelfProtection」 by gfbjngjibn](https://github.com/gfbjngjibn/RemoveMiuiSystemSelfProtection)
 - [「SettingsDontThroughTheList」 by weixiansen574](https://github.com/weixiansen574/settingsdontthroughthelist)
 - [「StarVoyager」 by hosizoraru](https://github.com/hosizoraru/StarVoyager)
+- [「SuperLyric」 by 焕晨HChen](https://github.com/HChenX/SuperLyric)
 - [「WINI」 by ouhoukyo](https://github.com/ouhoukyo/WINI)
 - [「WOMMO」 by YifePlayte](https://github.com/YifePlayte/WOMMO)
 - [「Woobox For MIUI」 by hosizoraru](https://github.com/hosizoraru/WooBoxForMIUI)

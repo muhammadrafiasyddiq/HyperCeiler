@@ -6,7 +6,7 @@
 
 ### Torne o HyperOS ótimo novamente!
 
-[简体中文](/README.md)&nbsp;&nbsp;|&nbsp;&nbsp;[繁體中文](/README_zh-HK.md)&nbsp;&nbsp;|&nbsp;&nbsp;[English](/README_en-US.md)&nbsp;&nbsp;|&nbsp;&nbsp;Português (Brasil)
+[简体中文](/README.md)&nbsp;&nbsp;|&nbsp;&nbsp;[繁體中文](/README_zh-HK.md)&nbsp;&nbsp;|&nbsp;&nbsp;[English](/README_en-US.md)&nbsp;&nbsp;|&nbsp;&nbsp;[Українська](/README_uk_UA.md)&nbsp;&nbsp;|&nbsp;&nbsp;Português (Brasil)
 
 </div>
 
@@ -150,7 +150,6 @@ Você pode fornecer traduções para o projeto [aqui](https://crwd.in/cemiuiler)
 - [「HyperSmartCharge」 por buffcow](https://github.com/buffcow/HyperSmartCharge)
 - [「HyperStar」 por YunZiA](https://github.com/YunZiA/HyperStar)
 - [「Kotlin」 por JetBrains](https://github.com/JetBrains/kotlin)
-- [「Lyric-Getter」 por xiaowine](https://github.com/xiaowine/Lyric-Getter)
 - [「MaxFreeForm」 por YifePlayte](https://github.com/YifePlayte/MaxFreeForm)
 - [「MediaControlOpt」 por YuKongA](https://github.com/YuKongA/MediaControlOpt)
 - [「MiuiFeature」 por MoralNorm](https://github.com/moralnorm/miui_feature)
@@ -167,6 +166,7 @@ Você pode fornecer traduções para o projeto [aqui](https://crwd.in/cemiuiler)
 - [「RemoveMiuiSystemSelfProtection」 por gfbjngjibn](https://github.com/gfbjngjibn/RemoveMiuiSystemSelfProtection)
 - [「SettingsDontThroughTheList」 por weixiansen574](https://github.com/weixiansen574/settingsdontthroughthelist)
 - [「StarVoyager」 por hosizoraru](https://github.com/hosizoraru/StarVoyager)
+- [「SuperLyric」 por 焕晨HChen](https://github.com/HChenX/SuperLyric)
 - [「WINI」 por ouhoukyo](https://github.com/ouhoukyo/WINI)
 - [「WOMMO」 por YifePlayte](https://github.com/YifePlayte/WOMMO)
 - [「Woobox For MIUI」 por hosizoraru](https://github.com/hosizoraru/WooBoxForMIUI)

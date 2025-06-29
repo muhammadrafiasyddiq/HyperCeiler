@@ -114,23 +114,34 @@ object NewPluginHelperKt : BaseHook() {
             factory.componentNames("miui.systemui.quicksettings.LocalMiuiQSTilePlugin"),
             factory.componentNames("miui.systemui.controlcenter.MiuiControlCenter") -> {
                 val classLoader: ClassLoader = factory.pluginCtxRef.get()!!.classLoader
-                logD(TAG, lpparam.packageName, "Plugin for sysui qs tiles && control center loaded.")
+                logD(
+                    TAG,
+                    lpparam.packageName,
+                    "Plugin for sysui qs tiles && control center loaded."
+                )
 
                 val loaders = listOf(
                     Triple(
                         "VolumeOrQSBrightnessValue",
-                        (isStyle == 1) && (mPrefsMap.getBoolean("system_ui_control_center_qs_brightness_top_value_show") || mPrefsMap.getBoolean("system_ui_control_center_qs_volume_top_value_show")),
+                        (isStyle == 1) && (mPrefsMap.getBoolean("system_ui_control_center_qs_brightness_top_value_show") || mPrefsMap.getBoolean(
+                            "system_ui_control_center_qs_volume_top_value_show"
+                        )),
                         VolumeOrQSBrightnessValue::initVolumeOrQSBrightnessValue
                     ),
                     Triple(
                         "CustomCardTiles",
                         mPrefsMap.getBoolean("systemui_plugin_card_tiles_enabled") &&
-                                mPrefsMap.getString("systemui_plugin_card_tiles", "").isNotEmpty()
+                            mPrefsMap.getString("systemui_plugin_card_tiles", "").isNotEmpty()
                     ) { cl -> CustomCardTiles.initCustomCardTiles(cl, mCardStyleTiles) },
                     Triple(
                         "HideEditButton",
                         mPrefsMap.getBoolean("system_ui_control_center_hide_edit_botton"),
                         HideEditButton::initHideEditButton
+                    ),
+                    Triple(
+                        "QsTileSuperBlur",
+                        mPrefsMap.getBoolean("system_ui_control_center_tile_super_blur"),
+                        QsTileSuperBlur::initQsTileSuperBlur
                     ),
                     Triple(
                         "CCGridForHyperOS",
@@ -140,7 +151,7 @@ object NewPluginHelperKt : BaseHook() {
                     Triple(
                         "QSColor",
                         mPrefsMap.getBoolean("system_ui_control_center_qs_open_color") ||
-                                mPrefsMap.getBoolean("system_ui_control_center_qs_big_open_color"),
+                            mPrefsMap.getBoolean("system_ui_control_center_qs_big_open_color"),
                         QSColor::pluginHook
                     ),
                     Triple(
@@ -153,6 +164,10 @@ object NewPluginHelperKt : BaseHook() {
                         mPrefsMap.getBoolean("system_ui_control_center_disable_device_managed"),
                         DisableDeviceManagedNew::initDisableDeviceManaged
                     ),
+                    Triple(
+                        "UnlockCarSicknessTile",
+                        mPrefsMap.getBoolean("security_center_unlock_car_sickness")
+                    ) { cl -> UnlockCarSicknessTile.initUnlockCarSicknessTile(cl) },
                 )
                 loadClassLoaders(factory.mComponentName.toString(), classLoader, loaders)
             }
@@ -160,12 +175,16 @@ object NewPluginHelperKt : BaseHook() {
             factory.componentNames("miui.systemui.notification.NotificationStatPluginImpl"),
             factory.componentNames("miui.systemui.notification.FocusNotificationPluginImpl") -> {
                 val classLoader: ClassLoader = factory.pluginCtxRef.get()!!.classLoader
-                logD(TAG, lpparam.packageName, "Plugin for sysui NotificationStatPluginImpl loaded.")
+                logD(
+                    TAG,
+                    lpparam.packageName,
+                    "Plugin for sysui NotificationStatPluginImpl loaded."
+                )
 
                 val loaders = listOf(
                     Triple(
                         "FocusNotifLyric",
-                        mPrefsMap.getBoolean("system_ui_statusbar_music_switch"),
+                        mPrefsMap.getBoolean("system_ui_statusbar_music_switch") || mPrefsMap.getBoolean("system_ui_unlock_all_focus"),
                         FocusNotifLyric::initLoader
                     ),
                 )
@@ -177,13 +196,8 @@ object NewPluginHelperKt : BaseHook() {
                 val loaders = listOf(
                     Triple(
                         "ShowDeviceName",
-                        mPrefsMap.getStringAsInt("system_ui_control_center_hide_operator", 0) == 3,
+                        mPrefsMap.getStringAsInt("system_ui_control_center_hide_operator", 0) == 3 && isHyperOSVersion(1f),
                         ShowDeviceName::initShowDeviceName
-                    ),
-                    Triple(
-                        "DefaultPluginTheme",
-                        mPrefsMap.getBoolean("system_ui_other_default_plugin_theme"),
-                        DefaultPluginTheme::initDefaultPluginTheme
                     ),
                 )
                 loadClassLoaders(factory.mComponentName.toString(), classLoader, loaders)
@@ -215,7 +229,11 @@ object NewPluginHelperKt : BaseHook() {
                 }
                 if (logLevel >= 3) logI(TAG, lpparam.packageName, "$name is loaded success.")
             }.onFailure {
-                if (logLevel >= 1) logE(TAG, lpparam.packageName, "[$tag] $name is fail loaded, log: $it")
+                if (logLevel >= 1) logE(
+                    TAG,
+                    lpparam.packageName,
+                    "[$tag] $name is fail loaded, log: $it"
+                )
             }
         }
     }
