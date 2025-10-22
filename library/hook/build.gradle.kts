@@ -18,7 +18,7 @@ android {
     compileSdk = 36
 
     defaultConfig {
-        minSdk = 34
+        minSdk = 33
 
         buildConfigField("String", "APP_MODULE_ID", "\"com.sevtinge.hyperceiler\"")
     }

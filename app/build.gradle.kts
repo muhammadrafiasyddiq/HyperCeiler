@@ -59,7 +59,7 @@ android {
 
     defaultConfig {
         applicationId = namespace
-        minSdk = 34
+        minSdk = 33
         targetSdk = 36
         versionCode = getVersionCode()
         versionName = "2.6.160"
